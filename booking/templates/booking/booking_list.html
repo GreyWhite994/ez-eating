@@ -10,11 +10,21 @@
     <table>
     {% for reservation in reservations %}
         <tr>
-            <td>{{ reservation.name }}</td>
-            <td>{{ reservation.date}}</td>
-            <td>{{ reservation.time}}</td>
-            <td>{{ reservation.guest_number}}</td>
+                {% if reservation.cancelled %}
+                    <td><strike>{{ reservation.name }}</strike></td>
+                    <td><strike>{{ reservation.date }}</strike></td>
+                    <td><strike>{{ reservation.time }}</strike></td>
+                    <td><strike>{{ reservation.guest_number }}</strike></td>
+                    <td><b>(Cancelled!)</b></td>
+                {% else %}
+                    <td>{{ reservation.name }}</td>
+                    <td>{{ reservation.date }}</td>
+                    <td>{{ reservation.time }}</td>
+                    <td>{{ reservation.guest_number }}</td>
+                {% endif%}
         </tr>
+    {% empty %}
+    <tr><td>There are no reservations!</td></tr>
     {% endfor %}
     </table>
 </body>

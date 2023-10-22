@@ -19,6 +19,7 @@ class Migration(migrations.Migration):
                 ('date', models.DateField()),
                 ('time', models.TimeField()),
                 ('guest_number', models.IntegerField()),
+                ('cancelled', models.BooleanField())
             ],
         ),
     ]
