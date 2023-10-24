@@ -9,30 +9,7 @@
     <h1>Book a Reservation:</h1>
     <form method="POST" action="create">
         {% csrf_token %}
-        <div>
-            <p>
-                <label for="id_name">Name: </label>
-                <input type="text" id="id_name" name="reservation_name">
-            </p>
-        </div>
-        <div>
-            <p>
-                <label for="id_date">Date: </label>
-                <input type="date" id="id_date" name="reservation_date">
-            </p>
-        </div>
-        <div>
-            <p>
-                <label for="id_time">Time: </label>
-                <input type="time" id="id_time" name="reservation_time">
-            </p>
-        </div>
-        <div>
-            <p>
-                <label for="id_guest_number">Guest number: </label>
-                <input type="number" id="id_guest_number" name="reservation_guest_number">
-            </p>
-        </div>
+        {{ form.as_p }}
         <div>
             <p>
                 <button type="submit">Book Reservation</button>
