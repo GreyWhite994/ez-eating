@@ -22,6 +22,11 @@
                     <td>{{ reservation.time }}</td>
                     <td>{{ reservation.guest_number }}</td>
                 {% endif%}
+                <td>
+                    <a href="/edit/{{ reservation.id }}">
+                        <button>Edit Reservation</button>
+                    </a>
+                </td>
         </tr>
     {% empty %}
     <tr><td>You have no reservations!</td></tr>
