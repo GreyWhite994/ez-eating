@@ -8,7 +8,6 @@ class Reservation(models.Model):
     date = models.DateField(null=False, blank=False)
     time = models.TimeField(null=False, blank=False)
     guest_number = models.IntegerField(null=False, blank=False)
-    cancelled = models.BooleanField(null=False, blank=False, default=False)
 
     def __str__(self):
         return self.name
