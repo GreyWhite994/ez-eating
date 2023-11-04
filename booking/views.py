@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from .models import Reservation
 from .forms import ReservationForm
 
-# Create your views here.
 
-
+@login_required
 def get_booking_list(request):
     reservations = Reservation.objects.all()
     context = {
@@ -17,7 +17,9 @@ def create_reservation(request):
     if request.method == 'POST':
         form = ReservationForm(request.POST)
         if form.is_valid():
-            form.save()
+            reservation = form.save(commit=False)
+            reservation.user = request.user
+            reservation.save()
             return redirect('get_booking_list')
     form = ReservationForm()
     context = {

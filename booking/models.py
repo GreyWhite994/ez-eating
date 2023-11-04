@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 
@@ -8,6 +9,10 @@ class Reservation(models.Model):
     date = models.DateField(null=False, blank=False)
     time = models.TimeField(null=False, blank=False)
     guest_number = models.IntegerField(null=False, blank=False)
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE,
+        blank=True, null=True
+        )
 
     def __str__(self):
         return self.name
