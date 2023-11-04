@@ -13,6 +13,7 @@
         <h1>Your Reservations:</h1>
         <table>
         {% for reservation in reservations %}
+            {% if reservation.user == request.user %}
                 <tr>
                     <td>{{ reservation.name }}</td>
                     <td>{{ reservation.date }}</td>
@@ -29,6 +30,7 @@
                         </a>
                     </td>
                 </tr>
+            {% endif %}
             {% empty %}
             <tr><td>You have no reservations!</td></tr>
         {% endfor %}
