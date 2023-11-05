@@ -21,7 +21,8 @@ def create_reservation(request):
             reservation.user = request.user
             reservation.save()
             return redirect('get_booking_list')
-    form = ReservationForm()
+    else:
+        form = ReservationForm()
     context = {
         'form': form
     }
