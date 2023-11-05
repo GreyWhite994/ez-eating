@@ -13,6 +13,8 @@ class Reservation(models.Model):
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE,
         blank=True, null=True
         )
+    class Meta:
+        unique_together = ('date', 'time',)
 
     def __str__(self):
         return self.name
