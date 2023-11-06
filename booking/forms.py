@@ -4,6 +4,15 @@ import datetime
 from django.core.exceptions import ValidationError
 
 time_choices = [(datetime.time(hour=x), '{:02d}:00'.format(x)) for x in range(11, 22)]
+guest_number_choices = (
+    ("1", 1),
+    ("2", 2),
+    ("3", 3),
+    ("4", 4),
+    ("5", 5),
+    ("6", 6),
+)
+
 
 class ReservationForm(forms.ModelForm):
     def clean_date(self):
@@ -18,6 +27,7 @@ class ReservationForm(forms.ModelForm):
 
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date'}),
-            'time': forms.Select(choices=time_choices)
+            'time': forms.Select(choices=time_choices),
+            'guest_number': forms.Select(choices=guest_number_choices)
         }
         
