@@ -10,7 +10,7 @@ def get_booking_list(request):
     context = {
         'reservations': reservations
     }
-    return render(request, 'booking/booking_list.html', context)
+    return render(request, 'booking_list.html', context)
 
 
 def create_reservation(request):
@@ -26,7 +26,7 @@ def create_reservation(request):
     context = {
         'form': form
     }
-    return render(request, 'booking/create_reservation.html', context)
+    return render(request, 'create_reservation.html', context)
 
 
 def edit_reservation(request, reservation_id):
@@ -40,7 +40,7 @@ def edit_reservation(request, reservation_id):
     context = {
         'form': form
     }
-    return render(request, 'booking/edit_reservation.html', context)
+    return render(request, 'edit_reservation.html', context)
 
 
 def delete_reservation(request, reservation_id):

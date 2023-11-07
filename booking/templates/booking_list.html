@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EZ Eating</title>
-</head>
-<body>
-    {% if user.is_authenticated %}
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-        </li>
-        <h1>Your Reservations:</h1>
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Your Reservations:</h1>
         <table>
         {% for reservation in reservations %}
             {% if reservation.user == request.user %}
@@ -36,13 +28,5 @@
         {% endfor %}
         </table>
         <a href="/create">Book a Reservation</a>
-    {% else %}
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-        </li>
-    {% endif %}
-</body>
-</html>
+
+{%endblock%}

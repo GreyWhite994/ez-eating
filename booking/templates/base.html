@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>EZ Eating</title>
+</head>
+<body>
+    <nav class="">
+        <button class="">Menu</button>
+        <div class="">
+            <ul class="">
+                <li class="">
+                    <a class="" aria-current="" href="">Home</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="">
+                    <a class="" href="">View Reservations</a>
+                </li>
+                <li class="">
+                    <a class="" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="">
+                    <a class="" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="">
+                    <a class="" href="{% url 'account_login' %}">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+
+    <main class="">
+
+        {% block content %}
+        
+        {% endblock content %}
+    </main>
+    <footer class="">
+        <p class="">EZ Eating</p>
+        <p class="">Follow us: 
+            <i class=""></i>
+            <i class=""></i>
+            <i class=""></i>
+            <i class=""></i></p>
+    </footer>
+</body>
+</html>
