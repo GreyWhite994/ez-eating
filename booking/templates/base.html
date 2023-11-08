@@ -14,11 +14,11 @@
         <div class="">
             <ul class="">
                 <li class="">
-                    <a class="" aria-current="" href="">Home</a>
+                    <a class="" aria-current="" href="{% url 'home' %}">Home</a>
                 </li>
                 {% if user.is_authenticated %}
                 <li class="">
-                    <a class="" href="">View Reservations</a>
+                    <a class="" href="{% url 'get_booking_list' %}">View Reservations</a>
                 </li>
                 <li class="">
                     <a class="" href="{% url 'account_logout' %}">Logout</a>

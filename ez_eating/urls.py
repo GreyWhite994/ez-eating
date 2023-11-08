@@ -23,4 +23,5 @@ urlpatterns = [
     path('edit/<reservation_id>', views.edit_reservation, name='edit'),
     path('delete/<reservation_id>', views.delete_reservation, name='delete'),
     path("accounts/", include("allauth.urls")),
+    path('home', views.get_home, name='home'),
 ]

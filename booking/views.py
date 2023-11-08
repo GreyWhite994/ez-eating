@@ -47,3 +47,6 @@ def delete_reservation(request, reservation_id):
     reservation = get_object_or_404(Reservation, id=reservation_id)
     reservation.delete()
     return redirect('get_booking_list')
+
+def get_home(request):
+    return render(request, 'index.html')
