@@ -18,10 +18,11 @@ from django.urls import path, include
 from booking import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.get_booking_list, name='get_booking_list'),
+    path('booking', views.get_booking_list, name='get_booking_list'),
     path('create', views.create_reservation, name='create_reservation'),
     path('edit/<reservation_id>', views.edit_reservation, name='edit'),
     path('delete/<reservation_id>', views.delete_reservation, name='delete'),
     path("accounts/", include("allauth.urls")),
-    path('home', views.get_home, name='home'),
+    path('', views.get_home, name='home'),
+    path('menu', views.get_menu, name='menu'),
 ]

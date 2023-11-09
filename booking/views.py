@@ -50,3 +50,6 @@ def delete_reservation(request, reservation_id):
 
 def get_home(request):
     return render(request, 'index.html')
+
+def get_menu(request):
+    return render(request, 'menu.html')

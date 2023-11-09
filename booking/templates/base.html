@@ -16,6 +16,9 @@
                 <li class="">
                     <a class="" aria-current="" href="{% url 'home' %}">Home</a>
                 </li>
+                <li class="">
+                    <a class="" aria-current="" href="{% url 'menu' %}">Menu</a>
+                </li>
                 {% if user.is_authenticated %}
                 <li class="">
                     <a class="" href="{% url 'get_booking_list' %}">View Reservations</a>
