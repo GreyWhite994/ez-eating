@@ -53,3 +53,6 @@ def get_home(request):
 
 def get_menu(request):
     return render(request, 'menu.html')
+
+def leave_review(request):
+    return render(request, 'review.html')

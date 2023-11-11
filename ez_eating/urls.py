@@ -25,4 +25,5 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('', views.get_home, name='home'),
     path('menu', views.get_menu, name='menu'),
+    path('review', views.leave_review, name='review'),
 ]
