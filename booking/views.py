@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .models import Reservation
-from .forms import ReservationForm
+from .models import Reservation, Review
+from .forms import ReservationForm, ReviewForm 
+import datetime
 
 
 @login_required
@@ -49,10 +50,26 @@ def delete_reservation(request, reservation_id):
     return redirect('get_booking_list')
 
 def get_home(request):
-    return render(request, 'index.html')
+    reviews = Review.objects.all()
+    context = {
+        'reviews': reviews
+    }
+    return render(request, 'index.html', context)
 
 def get_menu(request):
     return render(request, 'menu.html')
 
 def leave_review(request):
-    return render(request, 'review.html')
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.date = datetime.date.today()
+            review.save()
+            return redirect('home')
+    else:
+        form = ReviewForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'review.html', context)

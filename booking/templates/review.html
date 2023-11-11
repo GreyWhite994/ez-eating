@@ -4,4 +4,14 @@
 
 <h1>Review</h1>
 
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div>
+        <p>
+            <button type="submit">Submit Review</button>
+        </p>
+    </div>
+</form>
+
 {%endblock%}

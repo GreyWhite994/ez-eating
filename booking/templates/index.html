@@ -4,4 +4,17 @@
 
 <h1>EZ Eating</h1>
 
+<h1>Reviews:</h1>
+    <table>
+        {% for review in reviews %}
+            <tr>
+                <td>{{ review.name }}</td>
+                <td>{{ review.date }}</td>
+                <td>{{ review.review }}</td>
+            </tr>
+            {% empty %}
+            <tr><td>There are no reviews!</td></tr>
+        {% endfor %}
+    </table>
+
 {%endblock%}

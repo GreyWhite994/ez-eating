@@ -1,5 +1,5 @@
 from django import forms
-from .models import Reservation
+from .models import Reservation, Review
 import datetime
 from django.core.exceptions import ValidationError
 
@@ -31,3 +31,8 @@ class ReservationForm(forms.ModelForm):
             'guest_number': forms.Select(choices=guest_number_choices)
         }
         
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['name', 'review']
+    
