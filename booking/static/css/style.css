@@ -1,0 +1,39 @@
+/* nav styling */
+
+/* hero image and welcome text styling */
+
+#hero-section {
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+
+    position: relative;
+}
+
+#welcome-image {
+    height: 600px;
+    width:100%;
+    background: url(../images/bar-826688_1920.jpg) no-repeat center center;
+}
+
+
+/* footer styling */
+
+footer {
+    height: 200px;
+}
+
+.social-media {
+    text-align: center;
+}
+
+.social-media > li {
+    display: inline;
+}
+
+.social-media i {
+    color: black;
+    font-size: 200%;
+    margin: 1%;
+    padding: 5%;
+}
