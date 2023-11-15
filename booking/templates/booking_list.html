@@ -3,9 +3,17 @@
 {% block content %}
 
     <h1>Your Reservations:</h1>
-        <table>
+        <table class="table">
         {% for reservation in reservations %}
             {% if reservation.user == request.user %}
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Number of Guests</th>
+                    <th></th>
+                    <th></th>
+                </tr>
                 <tr>
                     <td>{{ reservation.name }}</td>
                     <td>{{ reservation.date }}</td>
