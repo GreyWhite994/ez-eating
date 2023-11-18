@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<h1>Book a Reservation:</h1>
-<form method="POST" action="create">
+<h1 class="text-center">Book a Reservation:</h1>
+<form method="POST" action="create" class="col-lg-6 offset-lg-3">
     {% csrf_token %}
     {{ form.as_p }}
-    <div>
+    <div class="text-center">
         <p>
             <button type="submit">Book Reservation</button>
         </p>

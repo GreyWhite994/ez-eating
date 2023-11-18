@@ -2,15 +2,15 @@
 
 {% block content %}
 
-    <h1>Your Reservations:</h1>
+    <h1 class="text-center">Your Reservations:</h1>
         <table class="table">
         {% for reservation in reservations %}
             {% if reservation.user == request.user %}
                 <tr>
-                    <th>Name</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Number of Guests</th>
+                    <th>Name:</th>
+                    <th>Date:</th>
+                    <th>Time:</th>
+                    <th>Number of Guests:</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -35,6 +35,6 @@
             <tr><td>You have no reservations!</td></tr>
         {% endfor %}
         </table>
-        <a href="/create">Book a Reservation</a>
+        <div class="text-center"><a href="/create"><button>Book a Reservation</button></a></div>
 
 {%endblock%}

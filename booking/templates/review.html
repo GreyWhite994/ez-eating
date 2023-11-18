@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<h1>Review</h1>
+<h1 class="text-center">Review</h1>
 
 <form method="POST">
-    <div class="">
+    <div class="col-lg-6 offset-lg-3">
         {% csrf_token %}
         {{ form.as_p }}
     </div>
-    <div>
+    <div class="text-center">
         <p>
             <button type="submit">Submit Review</button>
         </p>
