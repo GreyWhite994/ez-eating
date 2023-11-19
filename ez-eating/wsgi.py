@@ -1,5 +1,5 @@
 """
-WSGI config for ez_eating project.
+WSGI config for ez-eating project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

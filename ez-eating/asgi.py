@@ -1,5 +1,5 @@
 """
-ASGI config for ez_eating project.
+ASGI config for ez-eating project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
