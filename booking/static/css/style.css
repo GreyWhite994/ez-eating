@@ -1,3 +1,10 @@
+/* button styling */
+
+button:hover {
+    background-color: black;
+    color: white;
+}
+
 /* menu */
 #menu-section {
     height: 1000px;
@@ -14,7 +21,7 @@
 
 /* hero image and welcome text styling */
 
-#hero-section {
+#image-section {
     height: 600px;
     width: 100%;
     overflow: hidden;
@@ -24,13 +31,13 @@
 #welcome-image {
     height: 600px;
     width:100%;
-    background: url(../images/bar-826688_1920.jpg) no-repeat center center;
+    background: url(../images/bar.jpg) center center no-repeat;
 }
 
 /* footer styling */
 
 footer {
-    height: 200px;
+    height: 100%;
 }
 
 .social-media {
@@ -42,7 +49,7 @@ footer {
 }
 
 .social-media i {
-    color: black;
+    color: white;
     font-size: 200%;
     margin: 1%;
     padding: 5%;
