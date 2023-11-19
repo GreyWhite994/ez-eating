@@ -1,5 +1,16 @@
+/* menu */
+#menu-section {
+    height: 1000px;
+    width: 100%;
+    position: relative;
+}
 
-/* nav styling */
+#menu {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: url(../images/menu.png) no-repeat center center;
+}
 
 /* hero image and welcome text styling */
 
@@ -7,7 +18,6 @@
     height: 600px;
     width: 100%;
     overflow: hidden;
-
     position: relative;
 }
 
