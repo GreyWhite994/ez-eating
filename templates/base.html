@@ -34,7 +34,7 @@
                         <a class="nav-link {% block nav_item_review %}{% endblock nav_item_review %}" href="{% url 'review' %}">Leave a Review</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% block nav_item_logout %}{% endblock nav_item_logout %}" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% block nav_item_logout %}{% endblock nav_item_logout %}" href="{% url 'account_logout' %}">(Current User: <b>{{ request.user }}</b>) Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
