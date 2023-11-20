@@ -31,7 +31,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['ez-eating.herokuapp.com','8000-greywhite994-ezeating-fusmzveh98x.ws-eu106.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['ez-eating.herokuapp.com', 'localhost']
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ACCOUNT_EMAIL_VERIFICATION = "none"
 
