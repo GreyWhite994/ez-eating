@@ -2,10 +2,11 @@
 {% block nav_item_menu %}active{% endblock nav_item_menu %}
 
 {% block content %}
+{% load static %}
 
 <section id="menu-section">
     <div id="menu">
-        <img src="../static/images/menu.png" alt="Menu_image">
+        <img src="{% static 'images/menu.png' %}" alt="Menu">
     </div>
 </section>
 
