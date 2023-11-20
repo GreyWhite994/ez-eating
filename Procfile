@@ -1,1 +1,1 @@
-web: gunicorn ez-eating.wsgi:application
+web: gunicorn ez_eating.wsgi:application

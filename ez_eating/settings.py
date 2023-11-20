@@ -69,7 +69,7 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
-ROOT_URLCONF = 'ez-eating.urls'
+ROOT_URLCONF = 'ez_eating.urls'
 
 TEMPLATES = [
     {
@@ -87,7 +87,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ez-eating.wsgi.application'
+WSGI_APPLICATION = 'ez_eating.wsgi.application'
 
 
 # Database
