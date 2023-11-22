@@ -64,4 +64,3 @@ class ReviewForm(forms.ModelForm):
                 'style': 'max-width: 600px;',
                 'placeholder': 'Review'}),
         }
-    

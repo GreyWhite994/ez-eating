@@ -7,6 +7,12 @@ import datetime
 
 @login_required
 def get_booking_list(request):
+    """get_booking_list function
+
+    takes all objects from Reservation
+
+    returns booking_list.html with context
+    """
     reservations = Reservation.objects.all()
     context = {
         'reservations': reservations
@@ -15,6 +21,12 @@ def get_booking_list(request):
 
 
 def create_reservation(request):
+    """create_reservation function
+
+    takes reservation form and if is valid returns updated booking list
+
+    else resets and returns create_reservation.html with context
+    """
     if request.method == 'POST':
         form = ReservationForm(request.POST)
         if form.is_valid():
@@ -31,6 +43,13 @@ def create_reservation(request):
 
 
 def edit_reservation(request, reservation_id):
+    """ edit_reservation function
+
+    takes reservation object based on reservation_id and if form is valid
+    updates accordingly and returns booking_list.html
+
+    else returns edit_reservation.html with context
+    """
     reservation = get_object_or_404(Reservation, id=reservation_id)
     if request.method == "POST":
         form = ReservationForm(request.POST, instance=reservation)
@@ -45,11 +64,23 @@ def edit_reservation(request, reservation_id):
 
 
 def delete_reservation(request, reservation_id):
+    """ delete_reservation function
+
+    gets reservation based on reservation_id and deletes reservation
+
+    returns get_booking_list
+    """
     reservation = get_object_or_404(Reservation, id=reservation_id)
     reservation.delete()
     return redirect('get_booking_list')
 
 def get_home(request):
+    """ get_home function
+
+    takes all objects from Review
+
+    returns index.html with context
+    """
     reviews = Review.objects.all()
     context = {
         'reviews': reviews
@@ -57,9 +88,20 @@ def get_home(request):
     return render(request, 'index.html', context)
 
 def get_menu(request):
+    """ get_menu function
+
+    returns menu.html
+    """
     return render(request, 'menu.html')
 
 def leave_review(request):
+    """ leave_review function
+
+    takes ReviewForm and if valid form is saved and
+    date field is populated with current date and returned to home
+
+    else returned to review.html
+    """
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():

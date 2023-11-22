@@ -5,7 +5,7 @@ button:hover {
     color: white;
 }
 
-/* menu */
+/* menu styling */
 #menu-section {
     height: 1000px;
     width: 100%;
@@ -18,7 +18,7 @@ button:hover {
     object-fit: cover;
 }
 
-/* hero image and welcome text styling */
+/* welcome image and text styling */
 
 #image-section {
     height: 600px;
