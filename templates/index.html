@@ -11,16 +11,14 @@
 </section>
 
 <h1 class="text-center">Reviews:</h1>
-    <table class="table ">
-        {% for review in reviews %}
-            <div>
-                <p>Name: {{ review.name }}</p>
-                <p>Date: {{ review.date }}</p>
-                <p>Review: {{ review.review }}</p>
-            </div>
-            {% empty %}
-            <p>There are no reviews!</p>
-        {% endfor %}
-    </table>
+    {% for review in reviews %}
+        <div class="text-center">
+            <p>Name: {{ review.name }}</p>
+            <p>Date: {{ review.date }}</p>
+            <p>Review: {{ review.review }}</p>
+        </div>
+    {% empty %}
+        <p>There are no reviews!</p>
+    {% endfor %}
 
 {%endblock%}
