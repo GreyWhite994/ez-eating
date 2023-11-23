@@ -13,18 +13,13 @@
 <h1 class="text-center">Reviews:</h1>
     <table class="table ">
         {% for review in reviews %}
-            <tr>
-                <th>Name:</th>
-                <th>Date:</th>
-                <th>Review:</th>
-            </tr>
-            <tr>
-                <td>{{ review.name }}</td>
-                <td>{{ review.date }}</td>
-                <td>{{ review.review }}</td>
-            </tr>
+            <div>
+                <p>Name: {{ review.name }}</p>
+                <p>Date: {{ review.date }}</p>
+                <p>Review: {{ review.review }}</p>
+            </div>
             {% empty %}
-            <tr><td>There are no reviews!</td></tr>
+            <p>There are no reviews!</p>
         {% endfor %}
     </table>
 
