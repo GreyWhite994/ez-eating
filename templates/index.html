@@ -13,9 +13,9 @@
 <h1 class="text-center">Reviews:</h1>
     {% for review in reviews %}
         <div class="text-center">
-            <p>Name: {{ review.name }}</p>
-            <p>Date: {{ review.date }}</p>
-            <p>Review: {{ review.review }}</p>
+            <p><b>Name:</b> {{ review.name }}</p>
+            <p><b>Date:</b> {{ review.date }}</p>
+            <p><b>Review:</b> {{ review.review }}</p>
         </div>
     {% empty %}
         <p>There are no reviews!</p>
