@@ -87,3 +87,9 @@ The live version of the project can be found [here](https://ez-eating-52f91ace33
 ![Menu](/static/images/menu_tab.png)
 
 ## Future Features
+
+- Allow users to book multiple tables if occupancy is over the limit of 6, which it is currently set at.
+- Addition of multiple menus accessible from the menu tab for breakfast,lunch and dinner instead of 1 which it currently has.
+- Upgrade the aesthetic of the home page and add a gallery page to make the site more aesthetically pleasing.
+
+## Testing 
