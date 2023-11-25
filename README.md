@@ -92,4 +92,16 @@ The live version of the project can be found [here](https://ez-eating-52f91ace33
 - Addition of multiple menus accessible from the menu tab for breakfast,lunch and dinner instead of 1 which it currently has.
 - Upgrade the aesthetic of the home page and add a gallery page to make the site more aesthetically pleasing.
 
-## Testing 
+## Testing
+
+## Validator Testing
+
+## Bugs/Unfixed Bugs
+
+## Deployment 
+- Deployment steps
+    - Fork/clone this repository
+    - Create a new Heroku app
+    - Add DATABASE_URL/SECRET_KEY config vars in settings tab on Heroku, also add key of PORT and value of 8000
+    - Link the Heroku app to the repository
+    - Click Deploy
