@@ -105,3 +105,14 @@ The live version of the project can be found [here](https://ez-eating-52f91ace33
     - Add DATABASE_URL/SECRET_KEY config vars in settings tab on Heroku, also add key of PORT and value of 8000
     - Link the Heroku app to the repository
     - Click Deploy
+
+## Credits 
+
+### Content
+- Code Institute walkthrough projects ('Hello Django','I Think Therefore I Blog') for instruction on how to use Django, create database models, implement views/forms and finally how to use django-allauth to simplify the implementation of accounts in the project
+- How to implement widgets in forms.py taken from (https://www.appsloveworld.com/django/100/187/how-to-return-a-list-of-available-time-slots-via-a-forms-validationerror?expand_article=1)
+- How to prevent past dates being accepted for ReservationForm taken from [StackOverflow](https://stackoverflow.com/questions/70558856/django-how-to-prevent-to-accept-future-date)
+
+### Media
+- Menu image taken for free from (https://www.canva.com/p/templates/EAEfNjcKK9Q-simple-food-menu/)
+- Main image used on index.html taken for free from [Pixabay](https://pixabay.com/photos/bar-alcohol-cocktail-glass-party-264227/)

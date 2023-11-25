@@ -5,7 +5,10 @@ from django.core.exceptions import ValidationError
 
 
 """time_choices and guest_number choices to prevent user from picking a disallowed time
-or going over the max amount of allowed persons per table"""
+or going over the max amount of allowed persons per table
+time_choices taken from (
+    https://www.appsloveworld.com/django/100/187/how-to-return-a-list-of-available-time-slots-via-a-forms-validationerror?expand_article=1
+    )"""
 time_choices = [(datetime.time(hour=x), '{:02d}:00'.format(x)) for x in range(11, 22)]
 guest_number_choices = (
     ("1", 1),
