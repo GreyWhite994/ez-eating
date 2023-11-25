@@ -5,6 +5,8 @@
 
     <h1 class="text-center">Your Reservations:</h1>
         <table class="table">
+            <!-- Below code parses reservation object and if user in reservation object matches current user then their 
+            reservations will appear -->
         {% for reservation in reservations %}
             {% if reservation.user == request.user %}
                 <tr>
@@ -20,6 +22,7 @@
                     <td>{{ reservation.date }}</td>
                     <td>{{ reservation.time }}</td>
                     <td>{{ reservation.guest_number }}</td>
+                    <!-- Buttons with links to edit/delete reservations -->
                     <td>
                         <a href="/edit/{{ reservation.id }}">
                                 <button>Amend Reservation</button>
@@ -33,9 +36,11 @@
                 </tr>
             {% endif %}
             {% empty %}
+            <!-- If no reservations match criteria then below message will appear instead -->
             <tr><td>You have no reservations!</td></tr>
         {% endfor %}
         </table>
+        <!-- Button to bring user to create reservation page -->
         <div class="text-center"><a href="/create"><button>Book a Reservation</button></a></div>
 
 {%endblock%}
