@@ -4,6 +4,7 @@
 
 <h1>Edit a Reservation:</h1>
     <form method="POST">
+        <!-- Below code displays ReservationForm to user with information to edit -->
         {% csrf_token %}
         {{ form.as_p }}
         <div>

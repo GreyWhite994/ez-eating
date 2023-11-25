@@ -6,11 +6,13 @@
 
 <section id="image-section">
     <div id="welcome-image">
+        <!-- main display image -->
         <img src="{% static 'images/bar.jpg' %}" alt="Restaurant">
     </div>
 </section>
 
 <h1 class="text-center">Reviews:</h1>
+<!-- Parses review object and displays accordingly -->
     {% for review in reviews %}
         <div class="text-center">
             <p><b>Name:</b> {{ review.name }}</p>
@@ -18,6 +20,7 @@
             <p><b>Review:</b> {{ review.review }}</p>
         </div>
     {% empty %}
+    <!-- In event of no reviews the below is displayed -->
         <p>There are no reviews!</p>
     {% endfor %}
 

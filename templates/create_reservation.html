@@ -3,6 +3,7 @@
 {% block content %}
 
 <h1 class="text-center">Book a Reservation:</h1>
+<!-- Below code displays ReservationForm to user -->
 <form method="POST" action="create" class="col-lg-6 offset-lg-3">
     {% csrf_token %}
     {{ form.as_p }}
