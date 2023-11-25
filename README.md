@@ -116,3 +116,4 @@ The live version of the project can be found [here](https://ez-eating-52f91ace33
 ### Media
 - Menu image taken for free from (https://www.canva.com/p/templates/EAEfNjcKK9Q-simple-food-menu/)
 - Main image used on index.html taken for free from [Pixabay](https://pixabay.com/photos/bar-alcohol-cocktail-glass-party-264227/)
+- Favicon taken for free from [favicon.io](https://favicon.io/emoji-favicons/fork-and-knife-with-plate)
