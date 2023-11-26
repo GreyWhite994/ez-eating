@@ -18,13 +18,11 @@ button:hover {
 #menu-section {
     height: 1000px;
     width: 100%;
-    position: relative;
 }
 
 #menu {
     max-width: 100%;
     height: auto;
-    object-fit: contain;
     text-align: center;
 }
 
