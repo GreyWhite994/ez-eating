@@ -1,8 +1,6 @@
 from django.db import models
 from django.conf import settings
 
-# Create your models here
-
 class Reservation(models.Model):
     """Reservation class model for database
 
@@ -21,9 +19,15 @@ class Reservation(models.Model):
         blank=True, null=True
         )
     class Meta:
+        """
+        unique_together prevents database entries with same date and time as another entry
+        """
         unique_together = ('date', 'time',)
 
     def __str__(self):
+        """
+        Returns self.name
+        """
         return self.name
 
 class Review(models.Model):
@@ -38,4 +42,7 @@ class Review(models.Model):
     review = models.CharField(max_length=200, null=False, blank=False)
 
     def __str__(self):
+        """
+        Returns self.name
+        """
         return self.name

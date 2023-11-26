@@ -3,17 +3,16 @@
 
 {% block content %}
 {% load static %}
-
-<section id="menu-section">
-    <div id="menu">
-        <!-- main menu image -->
-        <img src="{% static 'images/menu.png' %}" alt="Menu">
-    </div>
-    <div id="small_menu">
-        <!-- alt menu image -->
-        <img src="{% static 'images/small_menu.png' %}" alt="Small Menu">
-    </div>
-</section>
-
-
+<div>
+    <section id="menu-section">
+        <div id="menu">
+            <!-- main menu image -->
+            <img src="{% static 'images/menu.png' %}" alt="Menu">
+        </div>
+        <div id="small_menu">
+            <!-- alt menu image -->
+            <img src="{% static 'images/small_menu.png' %}" alt="Small Menu">
+        </div>
+    </section>
+</div>
 {%endblock%}

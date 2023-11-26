@@ -1,9 +1,8 @@
+import datetime
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Reservation, Review
 from .forms import ReservationForm, ReviewForm 
-import datetime
-
 
 @login_required
 def get_booking_list(request):
@@ -18,7 +17,6 @@ def get_booking_list(request):
         'reservations': reservations
     }
     return render(request, 'booking_list.html', context)
-
 
 def create_reservation(request):
     """create_reservation function
@@ -41,7 +39,6 @@ def create_reservation(request):
     }
     return render(request, 'create_reservation.html', context)
 
-
 def edit_reservation(request, reservation_id):
     """ edit_reservation function
 
@@ -61,7 +58,6 @@ def edit_reservation(request, reservation_id):
         'form': form
     }
     return render(request, 'edit_reservation.html', context)
-
 
 def delete_reservation(request, reservation_id):
     """ delete_reservation function

@@ -93,13 +93,22 @@ The live version of the project can be found [here](https://ez-eating-52f91ace33
 - Upgrade the aesthetic of the home page and add a gallery page to make the site more aesthetically pleasing.
 
 ## Testing
+- Automated Testing:
+    - Three test files were utilised in the testing of this project:
+        - test_forms.py, test_views.py, test_models.py
+        - Below is the total coverage for Project, not 100% for reasons given in 'Unfixed Bugs' section
+    <br/>
+    ![Coverage](/static/images/coverage.png)
+    
 
 ## Validator Testing
 - Html - No errors returned when passing through W3C validator
-- 
-- 
+- CSS - No errors returned when passing through (Jigsaw) validator
+- Used Pylint tool. No significant errors found.
 
-## Bugs/Unfixed Bugs
+## Unfixed Bugs
+- As stated above in the Automated Testing section, a bug was encountered during testing. While running the test
+for adding a reservation to the database and then redirecting to the /booking page an error occured. Instead of a 302 redirect response a 200 response was given. This bug has still not been rectified and is the reason for only 96% testing coverage.
 
 ## Deployment 
 - Deployment steps

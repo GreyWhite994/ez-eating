@@ -39,14 +39,16 @@ class TestViews(TestCase):
         self.assertRedirects(response, '/booking')
 
     def test_get_edit_reservation_page(self):
-        reservation = Reservation.objects.create(name='Test Reservation Item', date='2022-11-22', time='11:00', guest_number=6)
+        reservation = Reservation.objects.create(name='Test Reservation Item', 
+        date='2022-11-22', time='11:00', guest_number=6)
         response = self.client.get(f'/edit/{reservation.id}')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'edit_reservation.html')
         self.assertTemplateUsed(response, 'base.html')
 
     def test_can_delete_reservation(self):
-        reservation = Reservation.objects.create(name='Test Reservation Item', date='2022-11-22', time='11:00', guest_number=6)
+        reservation = Reservation.objects.create(name='Test Reservation Item', 
+        date='2022-11-22', time='11:00', guest_number=6)
         response = self.client.get(f'/delete/{reservation.id}')
         self.assertRedirects(response, '/booking')
         existing_reservations = Reservation.objects.filter(id=reservation.id)

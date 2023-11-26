@@ -3,10 +3,9 @@ from .models import Reservation, Review
 import datetime
 from django.core.exceptions import ValidationError
 
-
 """time_choices and guest_number choices to prevent user from picking a disallowed time
-or going over the max amount of allowed persons per table
-time_choices taken from (
+    or going over the max amount of allowed persons per table
+    time_choices taken from (
     https://www.appsloveworld.com/django/100/187/how-to-return-a-list-of-available-time-slots-via-a-forms-validationerror?expand_article=1
     )"""
 time_choices = [(datetime.time(hour=x), '{:02d}:00'.format(x)) for x in range(11, 22)]
@@ -19,7 +18,6 @@ guest_number_choices = (
     ("6", 6),
 )
 
-
 class ReservationForm(forms.ModelForm):
     """ ReservationForm class
 
@@ -29,12 +27,20 @@ class ReservationForm(forms.ModelForm):
     Time and guest_number take constraints to limit their options
     """
     def clean_date(self):
+        """
+        Takes date which was entered and compares to todays date.
+        If past date the ValidationError occurs
+        """
         date = self.cleaned_data['date']
         if date < datetime.date.today():
             raise forms.ValidationError("The date cannot be in the past!")
         return date
 
     class Meta:
+        """
+        Inherits Reservation model
+        Adds widgets to ReservationForm
+        """
         model = Reservation
         fields = ['name', 'date', 'time', 'guest_number']
 
