@@ -119,8 +119,10 @@ The live version of the project can be found [here](https://ez-eating-52f91ace33
     - Three test files were utilised in the testing of this project:
         - test_forms.py, test_views.py, test_models.py
         - Below is the total coverage for Project, not 100% for reasons given in 'Unfixed Bugs' section
-    <br/>
-    ![Coverage](/static/images/coverage.png)
+
+<br/>
+
+![Coverage](/static/images/coverage.png)
     
 
 ## Validator Testing
