@@ -1,7 +1,7 @@
 from django import forms
+from django.core.exceptions import ValidationError
 from .models import Reservation, Review
 import datetime
-from django.core.exceptions import ValidationError
 
 """time_choices and guest_number choices to prevent user from picking a disallowed time
     or going over the max amount of allowed persons per table

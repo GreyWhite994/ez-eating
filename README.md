@@ -86,6 +86,28 @@ The live version of the project can be found [here](https://ez-eating-52f91ace33
 
 ![Menu](/static/images/menu_tab.png)
 
+<br/>
+
+## Development Process
+- Below you will see screenshots of the early stages of the design process for this website:
+<br/>
+
+![Home plan](/static/images/home_plan.png)
+
+<br/>
+
+![Reservation plan](/static/images/reservation_plan.png)
+
+<br/>
+
+![Review plan](/static/images/review_plan.png)
+
+<br/>
+
+- As can be see from the above, the plan for the site remained mostly unchanged from the beginning inception.
+- The basic layout of the header with the menu and the footer surrounding the center main content remained a feature on every page
+- The reservation/review pages followed a similar layout minus the main image seen on the index page
+
 ## Future Features
 
 - Allow users to book multiple tables if occupancy is over the limit of 6, which it is currently set at.
