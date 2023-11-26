@@ -95,6 +95,9 @@ The live version of the project can be found [here](https://ez-eating-52f91ace33
 ## Testing
 
 ## Validator Testing
+- Html - No errors returned when passing through W3C validator
+- 
+- 
 
 ## Bugs/Unfixed Bugs
 
@@ -109,7 +112,7 @@ The live version of the project can be found [here](https://ez-eating-52f91ace33
 ## Credits 
 
 ### Content
-- Code Institute walkthrough projects ('Hello Django','I Think Therefore I Blog') for instruction on how to use Django, create database models, implement views/forms and finally how to use django-allauth to simplify the implementation of accounts in the project
+- Code Institute walkthrough projects ('Hello Django','I Think Therefore I Blog') for instruction on how to use Django, create database models, implement views/forms, how to perform automated testing and finally how to use django-allauth to simplify the implementation of accounts in the project
 - How to implement widgets in forms.py taken from (https://www.appsloveworld.com/django/100/187/how-to-return-a-list-of-available-time-slots-via-a-forms-validationerror?expand_article=1)
 - How to prevent past dates being accepted for ReservationForm taken from [StackOverflow](https://stackoverflow.com/questions/70558856/django-how-to-prevent-to-accept-future-date)
 
