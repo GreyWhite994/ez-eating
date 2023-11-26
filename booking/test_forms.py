@@ -26,3 +26,17 @@ class TestReservationForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('guest_number', form.errors.keys())
         self.assertEqual(form.errors['guest_number'][0], 'This field is required.')
+
+class TestReviewForm(TestCase):
+
+    def test_review_name_is_required(self):
+        form = ReviewForm({'name': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('name', form.errors.keys())
+        self.assertEqual(form.errors['name'][0], 'This field is required.')
+
+    def test_review_review_is_required(self):
+        form = ReviewForm({'review': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('review', form.errors.keys())
+        self.assertEqual(form.errors['review'][0], 'This field is required.')

@@ -61,3 +61,12 @@ footer {
     margin: 1%;
     padding: 5%;
 }
+
+/* responsive design */
+
+/* 650px screen and down */
+@media screen and (max-width: 650px) {
+    #menu {
+        display: none;
+    }
+}
