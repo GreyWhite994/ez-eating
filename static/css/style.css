@@ -76,4 +76,7 @@ footer {
     #small_menu {
         display: block;
     }
+    .table {
+        max-width: 75%;
+    }
 }
