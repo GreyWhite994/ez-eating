@@ -26,6 +26,10 @@ button:hover {
     text-align: center;
 }
 
+#small_menu {
+    display: none;
+}
+
 /* welcome image and text styling */
 
 #image-section {
@@ -68,5 +72,8 @@ footer {
 @media screen and (max-width: 650px) {
     #menu {
         display: none;
+    }
+    #small_menu {
+        display: block;
     }
 }
